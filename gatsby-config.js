@@ -26,6 +26,20 @@ module.exports = {
         refetchInterval: 60,
       },
     },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@app": "src/app",
+          "@assets": "content/assets",
+          "@blog": "content/blog",
+          "@components": "src/components",
+          "@pages": "src/pages",
+          "@templates": "src/templates",
+        },
+        extensions: [],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
     {
