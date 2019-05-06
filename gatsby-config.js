@@ -2,8 +2,8 @@ const mdxFeed = require("gatsby-mdx/feed")
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `Gatsby Starter App`,
+    author: `Otis Virginie`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
@@ -11,8 +11,27 @@ module.exports = {
     },
   },
   plugins: [
+    // Simple config, passing URL
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "Guru",
+        // This is field under which it's accessible
+        fieldName: "guru",
+        // Url to query from
+        url: "http://localhost:9200/graphql",
+
+        // refetch interval in seconds
+        refetchInterval: 60,
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
