@@ -1,3 +1,5 @@
+site_url: "https://sad-edison-82b767.netlify.com/"
+
 backend:
   name: git-gateway
   branch: master
@@ -22,7 +24,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/pages/contact.mdx"
+      - file: "contact.mdx"
         label: "Contact"
         name: "contact"
         fields:
@@ -33,4 +35,26 @@ collections:
               default: "contact-page",
             }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        fields:
+          - {
+              label: "Title",
+              name: "title",
+              widget: "hidden",
+              default: "about",
+            }
+          - {
+              label: "Layout",
+              name: "title",
+              widget: "hidden",
+              default: "about",
+            }
           - { label: "Body", name: "body", widget: "markdown" }
