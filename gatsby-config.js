@@ -34,6 +34,7 @@ module.exports = {
           "@assets": "content/assets",
           "@blog": "content/blog",
           "@components": "src/components",
+          "@features": "src/features",
           "@pages": "src/pages",
           "@templates": "src/templates",
           "@utils": "src/utils",

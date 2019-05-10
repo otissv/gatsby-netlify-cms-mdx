@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 
-import { AppProvider } from "@app/AppProvider"
+import { AppProvider } from "@features/App/AppProvider"
 
 function ProviderReducer({ children, providers }) {
   return providers.reduceRight((Component, Provider) => {
