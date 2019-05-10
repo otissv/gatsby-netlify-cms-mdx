@@ -1,7 +1,7 @@
 import React from "react"
-import { useAppContext } from "@features/App/AppContext"
+import { useAppContext } from "../App/AppContext"
 
-export default function products({ children }) {
+export function Movies({ children }) {
   const { movies } = useAppContext()
 
   return (

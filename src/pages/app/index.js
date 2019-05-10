@@ -1,5 +1,12 @@
 import React from "react"
 
-export default function App(children) {
-  return <div>app secure</div>
+import { Movies } from "@features/Movies/Movies"
+import { AppProvider } from "@features/App/AppProvider"
+
+export default function app({ children }) {
+  return (
+    <AppProvider>
+      hello <Movies />
+    </AppProvider>
+  )
 }
