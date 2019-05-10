@@ -7,7 +7,7 @@ module.exports = {
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `otissv`,
     },
   },
   plugins: [
@@ -16,8 +16,8 @@ module.exports = {
       options: {
         alias: {
           "@app": "src/pages/app",
-          "@assets": "content/assets",
-          "@blog": "content/blog",
+          "@assets": ".content/assets",
+          "@blog": ".content/blog",
           "@components": "src/components",
           "@features": "src/features",
           "@pages": "src/pages",
@@ -36,14 +36,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/.content/blog`,
         name: `blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/.content/assets`,
         name: `assets`,
       },
     },
@@ -95,7 +95,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `.content/assets/gatsby-icon.png`,
       },
     },
     {
