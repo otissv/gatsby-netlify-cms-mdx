@@ -24,7 +24,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "contact.mdx"
+      - file: "src/pages/contact.md"
         label: "Contact"
         name: "contact"
         fields:
@@ -37,21 +37,91 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }
 
-      - file: "about.md"
-        label: "About Page"
+      - file: "src/pages/about.md"
+        label: "About"
         name: "about"
-        create: true
         fields:
           - {
-              label: "Title",
-              name: "title",
+              label: "Template Key",
+              name: "templateKey",
               widget: "hidden",
-              default: "about",
+              default: "about-page",
             }
+          - { label: "Title", name: "title", widget: "string" }
           - {
-              label: "Layout",
-              name: "title",
-              widget: "hidden",
-              default: "about",
+              label: "Main Image",
+              name: "mainImage",
+              widget: "object",
+              fields:
+                [
+                  { label: "Image", name: "image", widget: "image" },
+                  {
+                    label: "Image Description",
+                    name: "imageAlt",
+                    widget: "string",
+                  },
+                ],
             }
           - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Image Gallery",
+              name: "gallery",
+              widget: "list",
+              fields:
+                [
+                  { label: "Image", name: "image", widget: "image" },
+                  {
+                    label: "Image Description",
+                    name: "imageAlt",
+                    widget: "string",
+                  },
+                ],
+            }
+          - {
+              label: "Developer Groups",
+              name: "developerGroups",
+              widget: "markdown",
+            }
+          - {
+              label: "Meetup Organizers",
+              name: "organizers",
+              widget: "object",
+              fields:
+                [
+                  { label: "Title", name: "title", widget: "string" },
+                  {
+                    label: "Images",
+                    name: "gallery",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Name", name: "name", widget: "string" },
+                        { label: "Image", name: "image", widget: "image" },
+                        {
+                          label: "Image Description",
+                          name: "imageAlt",
+                          widget: "string",
+                        },
+                      ],
+                  },
+                ],
+            }
+          - {
+              label: "SEO & Meta",
+              name: "seo",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Browser Tab Title",
+                    name: "browserTitle",
+                    widget: "string",
+                  },
+                  { label: "Title", name: "title", widget: "string" },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "string",
+                  },
+                ],
+            }
