@@ -48,6 +48,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/.content/pages`,
+        name: `assets`,
+      },
+    },
+    {
       resolve: `gatsby-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
