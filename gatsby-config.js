@@ -28,6 +28,9 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-yaml`,
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
     },
     {
@@ -51,7 +54,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/.content/pages`,
-        name: `assets`,
+        name: `pages`,
       },
     },
     {

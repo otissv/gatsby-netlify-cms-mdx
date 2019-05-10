@@ -3,3 +3,30 @@ title: Contact
 date: 2019-05-06T11:03:04.863Z
 description: contact page
 ---
+
+export default function Contact({ data, ...propsRest }) {
+  const { body, hero, title } = data.allPagesYaml.edges[0].node
+  return (
+    <div>
+      <header>
+        <h1>{title}</h1>
+        <p>{hero}</p>
+        <div>{body}</div>
+      </header>
+    </div>
+  )
+}
+
+export const pageQuery = graphql`
+  query {
+    allPagesYaml(filter: { title: { eq: "contact" } }) {
+      edges {
+        node {
+          hero
+          title
+          body
+        }
+      }
+    }
+  }
+`
