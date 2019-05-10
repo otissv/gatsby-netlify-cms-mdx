@@ -11,25 +11,6 @@ module.exports = {
     },
   },
   plugins: [
-    // Simple config, passing URL
-    // {
-    //   resolve: "gatsby-source-graphql",
-    //   options: {
-    //     // This type will contain remote schema Query type
-    //     typeName: "Guru",
-    //     // This is field under which it's accessible
-    //     fieldName: "guru",
-    //     // Url to query from
-    //     url: "http://localhost:9200/graphql",
-
-    //     // refetch interval in seconds
-    //     refetchInterval: 60,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-create-client-paths`,
-    //   options: { prefixes: [`/app/*`] },
-    // },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
@@ -46,8 +27,12 @@ module.exports = {
         extensions: [],
       },
     },
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -85,8 +70,12 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -109,8 +98,12 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-offline`,
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`,
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
