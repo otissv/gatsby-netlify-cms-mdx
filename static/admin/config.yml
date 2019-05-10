@@ -23,8 +23,9 @@ collections:
 
   - name: "pages"
     label: "Pages"
+    extension: json
     files:
-      - file: "src/pages/contact.mdx"
+      - file: "content/pages/contact.json"
         label: "Contact"
         name: "contact"
         fields:
