@@ -12,40 +12,37 @@ module.exports = {
   },
   plugins: [
     // Simple config, passing URL
-    {
-      resolve: "gatsby-source-graphql",
-      options: {
-        // This type will contain remote schema Query type
-        typeName: "Guru",
-        // This is field under which it's accessible
-        fieldName: "guru",
-        // Url to query from
-        url: "http://localhost:9200/graphql",
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     // This type will contain remote schema Query type
+    //     typeName: "Guru",
+    //     // This is field under which it's accessible
+    //     fieldName: "guru",
+    //     // Url to query from
+    //     url: "http://localhost:9200/graphql",
 
-        // refetch interval in seconds
-        refetchInterval: 60,
-      },
-    },
+    //     // refetch interval in seconds
+    //     refetchInterval: 60,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          "@app": "src/app",
+          "@app": "src/pages/app",
           "@assets": "content/assets",
           "@blog": "content/blog",
           "@components": "src/components",
           "@pages": "src/pages",
           "@templates": "src/templates",
+          "@utils": "src/utils",
         },
         extensions: [],
       },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/app/*`] },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

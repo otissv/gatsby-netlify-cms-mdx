@@ -1,18 +1,6 @@
-import React, { Fragment, useContext } from "react"
+import React, { Fragment } from "react"
 
-const AppContext = React.createContext()
-
-export function useAppContext() {
-  return useContext(AppContext)
-}
-
-export function AppProvider({ children }) {
-  const context = {
-    movies: ["Avengers", "Starwars", "Goonies"],
-  }
-
-  return <AppContext.Provider value={context}>{children}</AppContext.Provider>
-}
+import { AppProvider } from "@app/AppProvider"
 
 function ProviderReducer({ children, providers }) {
   return providers.reduceRight((Component, Provider) => {
