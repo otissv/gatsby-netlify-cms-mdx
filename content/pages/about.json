@@ -1,1 +1,8 @@
-{}
+{
+  "title": "About",
+  "seo": {
+    "browserTitle": "About page",
+    "title": "About",
+    "description": "My About page"
+  }
+}
