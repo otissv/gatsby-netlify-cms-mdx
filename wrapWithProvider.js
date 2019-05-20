@@ -1,6 +1,6 @@
 import React, { Fragment } from "react"
 
-import { AppProvider } from "./src/components/AppProvider"
+import { ThemeProvider } from "redesign-system/lib/ThemeContext"
 
 function ProviderReducer({ children, providers }) {
   return providers.reduceRight((Component, Provider) => {
@@ -9,7 +9,7 @@ function ProviderReducer({ children, providers }) {
 }
 
 export default function wrapWithProvider({ element }) {
-  const providers = [AppProvider]
+  const providers = [ThemeProvider]
 
   return <ProviderReducer providers={providers}>{element}</ProviderReducer>
 }
