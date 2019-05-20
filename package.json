@@ -42,7 +42,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
-    "redesign-system": "0.0.1",
+    "redesign-system": "0.0.2",
     "styled-components": "^4.2.0",
     "styled-normalize": "^8.0.6",
     "typeface-merriweather": "0.0.72",
